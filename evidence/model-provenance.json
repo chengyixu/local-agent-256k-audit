@@ -1,0 +1,65 @@
+{
+  "models": [
+    {
+      "role": "normal",
+      "source_repo": "ornith-ai/Ornith-1.5-35B-A3B-GGUF",
+      "revision": "12393612fd4f730ff5aadc23e9b8f9648aa49ceb",
+      "context_window": 262144
+    },
+    {
+      "role": "uncensored",
+      "source_repo": "PocketAiHub/Ornith-1.5-35B-A3B-Abliterated-GGUF",
+      "revision": "78c2971382a49b442ce044fd4e17169217b0b36c",
+      "context_window": 262144
+    },
+    {
+      "role": "image",
+      "source_repo": "abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
+      "revision": "8fa47c0eb8da2323cd756f01404601ed4ff4706e",
+      "context_window": null
+    }
+  ],
+  "verified_weight_files": [
+    {
+      "file": "qwen-image-2.1-UC-Q6_K.gguf",
+      "bytes": 5876556576,
+      "sha256": "e14bb312109333b3d73b92ad9b9ac8b29b51f2edca1e7b86d1af1981bf1c4ee3",
+      "verified": true
+    },
+    {
+      "file": "qwen3vl_8b_bf16.safetensors",
+      "bytes": 17534334616,
+      "sha256": "68bdc82bc1b66851162ae656225e7e2068166b603db19bd5d5a3b90eb12669a9",
+      "verified": true
+    },
+    {
+      "file": "qwen_image_2.1_vae_bf16.safetensors",
+      "bytes": 675509688,
+      "sha256": "bb21f7473051e1ac368515dd3f2e15cd44d7a11748ee8823e1ddca3e4876b7c9",
+      "verified": true
+    },
+    {
+      "file": "Ornith-1.5-35B-Q4_K_M.gguf",
+      "bytes": 21713463040,
+      "sha256": "42739874cc2ccfdb8523b23fbe52e29b2a7555c8176737ca9ca0b5d59859d41f",
+      "verified": true
+    },
+    {
+      "file": "Ornith-1.5-35B-A3B-Abliterated-Q4_K_M.gguf",
+      "bytes": 21166757664,
+      "sha256": "a07f299e83a398b5078c1cb8ab4ec96333c8ea9d10d0cb479cb073056fedd3d0",
+      "verified": true
+    }
+  ],
+  "runtime": {
+    "splash_commit": "c64a578fcfaa059023a2ca57230d4aead134b73b",
+    "sd_cpp_commit": "2f886889e6e8b78738d6b87f7191f6018557c551",
+    "text_metal_gib": 28,
+    "text_disk_cache_gib": 8,
+    "prefill_max_rows": 512,
+    "local_patches": [
+      "Q4_K alpha/beta support",
+      "opt-in512-row prefill cap"
+    ]
+  }
+}

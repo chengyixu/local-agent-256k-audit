@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["receipts", "cases", "retryable_statuses", "inspected_file", "verification_command"],
+  "properties": {
+    "receipts": {"type": "array", "items": {"type": "string"}, "minItems": 3, "maxItems": 3},
+    "cases": {
+      "type": "array", "minItems": 3, "maxItems": 3,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["max_attempts", "initial_delay_s", "max_delay_s", "delays"],
+        "properties": {
+          "max_attempts": {"type": "integer"},
+          "initial_delay_s": {"type": "number"},
+          "max_delay_s": {"type": "number"},
+          "delays": {"type": "array", "items": {"type": "number"}}
+        }
+      }
+    },
+    "retryable_statuses": {
+      "type": "object", "additionalProperties": false,
+      "required": ["429", "401"],
+      "properties": {"429": {"type": "boolean"}, "401": {"type": "boolean"}}
+    },
+    "inspected_file": {"type": "string"},
+    "verification_command": {"type": "string"}
+  }
+}

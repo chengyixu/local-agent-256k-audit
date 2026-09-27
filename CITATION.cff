@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "Please cite the specific report and artifact revision; this repository does not establish a universal speed guarantee."
+title: "Local Agent 256K Audit: Exact Admission, Workspace Evaluation, and Local Image Deployment"
+authors:
+  - family-names: Xu
+    given-names: Chengyi
+    orcid: "https://orcid.org/0009-0008-1277-6670"
+  - name: KLIK team
+version: 1.0.0
+date-released: 2026-09-28
+type: software
+repository-code: "https://github.com/chengyixu/local-agent-256k-audit"
+url: "https://huggingface.co/datasets/ChengyiX/local-agent-256k-audit"
+license: MIT
+abstract: "AI-assisted research reports and sanitized evidence for real-workspace local inference. Code is MIT; manuscripts/data are CC BY 4.0; generated image and model terms are separately described in LICENSE. Cold latency, failed runs, and freeform reasoning limitations are retained."

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "local-ornith15-35b-262k",
+    "contextWindow": 262144,
+    "maxTokens": 4096,
+    "provider": "ccs-local-ornith15-normal-pi",
+    "baseUrl": "http://127.0.0.1:7870/v1",
+    "defaultEnabled": true
+  },
+  {
+    "id": "local-ornith15-35b-abliterated-262k",
+    "contextWindow": 262144,
+    "maxTokens": 4096,
+    "provider": "ccs-local-ornith15-uncensored-pi",
+    "baseUrl": "http://127.0.0.1:7871/v1",
+    "defaultEnabled": true
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "registered_mcp_id": "local-qwen-image-21",
+  "elapsed_including_mcp_startup_s": 374.0735445410246,
+  "png_sha256": "d76a733009ca383e63e2358d305375431193efe844b344d54bcbea3ea4f96872",
+  "png_bytes": 236756,
+  "valid_nonblank_png": true,
+  "ocr_local_found": true,
+  "red_pixel_fraction": 0.09389877319335938,
+  "blue_pixel_fraction": 0.05722808837890625,
+  "license": "Qwen Research License: research/evaluation only without separate permission",
+  "request": {
+    "prompt": "A clean studio photograph of a red cube beside a blue sphere on a white table. A small upright white card reads LOCAL in clear black capital letters. Soft neutral lighting, simple composition.",
+    "width": 512,
+    "height": 512,
+    "steps": 20,
+    "seed": 42
+  },
+  "semantic_visual_review_completed": false,
+  "generation_elapsed_s": 373.7367919590324
+}
