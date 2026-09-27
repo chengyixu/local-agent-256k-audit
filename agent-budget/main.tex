@@ -36,7 +36,7 @@ FreeToken's implementation targets a different hardware/software environment, so
 
 \section{Tasks and evidence boundaries}
 \paragraph{Repository review (A).} The agent traces an OpenAI-compatible structured request through the public facade, retries, deadlines, overrides and tests, then writes a 400--650-word report. This is a freeform intelligence check. Actual tool traces and cited source were inspected; proposed test commands were checked separately.
-\paragraph{Repository repair (B, earlier evidence).} A deliberately injected retry-cap defect in an isolated checkout must be repaired. This is not represented as a newly discovered production bug. Separate gates and full unit suites passed in earlier normal and abliterated runs; those results do not automatically transfer to every later configuration.
+\paragraph{Repository repair (B).} A deliberately injected retry-cap defect in an isolated checkout must be repaired. This is not represented as a newly discovered production bug. Earlier gates and full unit suites passed, but those results were not automatically transferred to later configurations. A final installed-path series repeats this task in three fresh clones per target, with normal extensions and exact admission enabled by the installed provider-scoped extension, without a task-specific output schema.
 \paragraph{Deep audit (D).} A reference attachment contains real private source snapshots and three position-separated receipts. The agent reads the actual retry implementation and uses the checkout's Python environment to execute three retry cases plus HTTP-status checks. It must recover the receipts from supplied context, not reread the attachment, and report the actual successful command. The expected delay sequences are $[1,2]$, $[2,2,2,2]$, and $[]$; status 429 is retryable and 401 is not. These are evaluation targets, not injected answer values in generation constraints.
 
 Normal extension discovery exposes 38 tools. The original controlled attachment plus full tool schemas exceeded the model limit at 267,827 tokens. We therefore created an explicitly separate full-extension reference variant, removing 11 complete late source sections while preserving all receipts and the task. It contains 155 source sections and produces 256,150 actual initial input tokens. The controlled and full-extension datasets are not pooled as identical conditions.
@@ -99,6 +99,23 @@ Abliterated & D-V 3 &258408&86.29&48.13&19.47\\\bottomrule
 The full-extension cold normal baseline takes 1,765.78 seconds and the cold abliterated baseline 1,810.99 seconds. Another normal controlled production run takes 2,024.06 seconds. Exact-budget normal cold inference takes 1,462.49 seconds. These values do not establish a prefill speedup from admission control: host load, state and runs differ. Cold latency remains a major practical limitation.
 
 Freeform review is less reliable than the bounded execution audit. Normal Ornith completes in 260.78 seconds, with 20 tools and no tool errors; its 562-word report has broadly supported core findings but overstates structured defaults and omits a classifier precedence detail. Its visible streaming is 43.55 tokens/s, but its full final-cycle rate is 13.40. The abliterated review completes in 338.93 seconds and misidentifies part of the factory path and repair behavior. Empero completes in 345.77 seconds with 27 tools and a 1,077-word report; it invents sync delegation and incorrect shared-deadline arithmetic. It is not selected despite 39.01 visible-stream tokens/s. No claim of flawless reasoning follows from the deep audit passes.
+
+\subsection{Final installed-path repair series}
+Each fresh clone starts from the same recorded repository revision with a deliberately inverted retry cap. The independent gate fails before the agent runs. After each repair, the original implementation is restored, new retry tests cover the over-cap initial delay, and no unrelated tracked implementation file changes. The parent reruns the independent gate (three tests and 527 subtests) and the full repository suite. All six runs pass; five suites report 275 passed and one skipped, and one reports 274 passed and one skipped because the number of added tests differs.
+
+\begin{table}[H]\centering\small
+\begin{tabular}{llrrr}\toprule
+Target & Run & Task wall (s) & $R_{\rm stream}$ & $R_{\rm cycle}$\\\midrule
+Normal & Repair1 &125.70&38.25&25.50\\
+Normal & Repair2 &141.38&55.22&44.51\\
+Normal & Repair3 &91.53&63.26&53.92\\
+Abliterated & Repair1 &112.31&61.69&49.36\\
+Abliterated & Repair2 &83.18&70.97&58.34\\
+Abliterated & Repair3 &129.03&52.95&22.37\\\bottomrule
+\end{tabular}
+\caption{Real editing and tests through the installed Pi path, not a blank session. Final-cycle rates include preflight and reasoning. Whole-task time includes all tool turns; this ordinary-context repair is not itself the 256k proof.}
+\end{table}
+These repeated repairs provide stronger evidence of practical coding than output formatting alone. They still do not erase the freeform-review errors or establish a universal task-speed floor.
 
 \section{Deployment and reproducibility}
 The two text endpoints and a separate image service are exposed through an on-demand Desktop controller and registered in CC Switch. Text providers remain distinct from the image MCP tool. Startup, identity/readiness, exclusive switching and shutdown were exercised. Only one large runtime is admitted. Registration is not an assertion that every registered client has independently passed a deep test.

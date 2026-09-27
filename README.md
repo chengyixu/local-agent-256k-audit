@@ -32,6 +32,8 @@ On one Apple M4 Max / 64 GiB workstation, normal and separate abliterated Ornith
 | Normal Ornith Q4 | 45.82–96.58 tok/s | 16.72–40.95 tok/s | 3/3 |
 | Abliterated Ornith Q4 | 44.34–48.13 tok/s | 16.34–23.70 tok/s | 3/3 |
 
+A final installed-path repair series used **three fresh real-repository clones per target**, normal Pi extensions, actual edits, and independent before/after tests. All six repairs passed the independent gate and full repository suite. Normal visible streaming was **38.25–63.26 tok/s** and full final-cycle output was **25.50–53.92 tok/s**; abliterated streaming was **52.95–70.97 tok/s** and full final-cycle output **22.37–58.34 tok/s**. These ordinary-context repair runs are separate from the deep-context proof above.
+
 **Not established:** a universal 20 tok/s end-to-end floor, flawless code reasoning, or globally optimal intelligence. Cold prefill took roughly 23–34 minutes in measured runs. The ordinary full-extension normal baseline completed only 1/3 runs; baseline strict-quality passes were 0/3 for both targets. Freeform repository reviews retain factual errors. An additional Empero 35B distillation was measured and not selected due to major review errors. Failed runs are retained in the evidence tables rather than replaced by later successes.
 
 The requested Qwen-Image 2.1 Uncensored Q6 service generated a valid, nonblank 512×512 PNG through the actual registered MCP → native API path in 373.74 s. Local OCR recovered `LOCAL`. This is integration evidence, **not expert visual-quality assessment**. Image performance is not measured in text tokens/s.
